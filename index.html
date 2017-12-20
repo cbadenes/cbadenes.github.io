@@ -1,194 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="robots" content="noindex, nofollow">
 
-    <title>procosci-blog</title>
+    <title>C. Badenes-Olmedo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" id="bootstrap-css">
+	<link rel="stylesheet" type="text/css"
+	    href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">	
+    <style type="text/css">
+    .timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: 50%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+.timeline > li.timeline-inverted + li:not(.timeline-inverted),
+.timeline > li:not(.timeline-inverted) + li.timeline-inverted {
+margin-top: -60px;
+}
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+.timeline > li:not(.timeline-inverted) {
+padding-right:90px;
+}
 
-    <!-- Custom CSS -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+.timeline > li.timeline-inverted {
+padding-left:90px;
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+  text-align: center;
+}
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+  font-family: "Computer Modern Sans", sans-serif;
+  text-align: justify;
+}
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+    </style>
+    <script   src="https://code.jquery.com/jquery-1.10.2.min.js"   integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg="   crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--<script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height());           
+        });
+    </script>-->
 </head>
-
 <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <!--<div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Blog</a>
-            </div>-->
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h2>Programming -> Computer <- Science</h2>
-                        <hr class="small">
-                        <span class="subheading">personal experiences in this respect</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                        </h2>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Science has not yet mastered prophecy
-                        </h2>
-                        <h3 class="post-subtitle">
-                            We predict too much for the next year and yet far too little for the next ten.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Failure is not an option
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
-                </div>
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+	<div class="container">
+    <div class="page-header">
+        <h1 id="timeline">Carlos Badenes-Olmedo</h1>
+		<p><small class="text-muted"><i class="glyphicon glyphicon-user"></i> @carbadol</small></p>              
+		<p><small class="text-muted"><i class="glyphicon glyphicon-envelope"></i> cbadenes [at] gmail.com</small></p>              
     </div>
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                      <li>
-                          <a href="https://twitter.com/cbolmedo">
-                              <span class="fa-stack fa-lg">
-                                  <i class="fa fa-circle fa-stack-2x"></i>
-                                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                              </span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://es.linkedin.com/in/cbadenes">
-                              <span class="fa-stack fa-lg">
-                                  <i class="fa fa-circle fa-stack-2x"></i>
-                                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                              </span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://github.com/cbadenes">
-                              <span class="fa-stack fa-lg">
-                                  <i class="fa fa-circle fa-stack-2x"></i>
-                                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                              </span>
-                          </a>
-                      </li>
-                    </ul>
-                    <p class="copyright text-muted">Copyright &copy; cbadenes 2016</p>
-                </div>
+    <ul class="timeline">
+        <li class="timeline-inverted">
+		  <div class="timeline-badge warning"><i class="glyphicon glyphicon-list-alt"></i></div>          
+          <div class="timeline-panel">
+            <div class="timeline-heading">		
+				<h4 class="timeline-title">Cross-Evaluation of Term Extraction Tools  by Measuring Terminological Saturation</h4>
+				<p align="left"><i>post-proceedings @<a target="_blank"href="http://icteri.org/icteri-2017/">ICTERI</a></i></p>
+              	<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 29/12/2017</small></p>
             </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
-
+            <div class="timeline-body">              
+			  <p align="justify">This paper reports on cross-evaluating the two freely available software tools for automated term extraction (ATE) from English texts: NaCTeM TerMine and UPM Term Extractor. The objective was to find the most fitting software for extracting the bags of terms to be the part of our instrumental pipeline for exploring terminological saturation in text document collections in a domain of interest. The choice of these particular tools from the bunch of the other available is explained in our review of the related work in ATE. The approach to measure terminological saturation is based on the use of the THD algorithm developed in frame of our OntoElect methodology for ontology refinement. The paper presents the suite of instrumental software modules, experimental workflow, 2 synthetic and 3 real document collections, generated datasets, and set-up of our experiments. Next, the results of the cross-evaluation experiments are presented, analyzed, and discussed. Finally the paper offers some conclusions and recommendations on the use of ATE software for measuring terminological saturation in retrospective text document collections.</p>
+              <hr>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-download"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+				  <li><a target="_blank" href="#">Paper</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+		  <div class="timeline-badge warning"><i class="glyphicon glyphicon-list-alt"></i></div>          
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Efficient Clustering from Distributions over Topics</h4>
+			  <p align="left"><i>paper @<a target="_blank" href="https://k-cap2017.org/main-conference/">K-CAP 2017</a></i></p>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 06/12/2017</small></p>              
+            </div>
+            <div id="d1" class="timeline-body">
+              <p align="justify">There are many scenarios where we may want to find pairs of textually similar documents in a large corpus (e.g. a researcher doing literature review, or an R&D project manager analyzing project proposals). To programmatically discover those connections can help experts to achieve those goals, but brute-force pairwise comparisons are not computationally adequate when the size of the document corpus is too large. Some algorithms in the literature divide the search space into regions containing potentially similar documents, which are later processed separately from the rest in order to reduce the number of pairs compared. However, this kind of unsupervised methods still incur in high temporal costs. In this paper, we present an approach that relies on the results of a topic modeling algorithm over the documents in a collection, as a means to identify smaller subsets of documents where the similarity function can then be computed. This approach has proved to obtain promising results when identifying similar documents in the domain of scientific publications. We have compared our approach against state of the art clustering techniques and with different configurations for the topic modeling algorithm. Results suggest that our approach outperforms (>0.5) the other analyzed techniques in terms of efficiency.</p>
+              <hr>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-download"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a target="_blank" href="papers/efficient-clustering-distributions.pdf">Paper</a></li>
+				  <li><a target="_blank" href="https://www.slideshare.net/CarlosBadenes/efficient-clustering-from-distributions-over-topics-84159286">Slides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+		  <div class="timeline-badge"><i class="glyphicon glyphicon-blackboard"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">		
+				<h4 class="timeline-title">Hybrid techniques for knowledge-based NLP: Knowledge graphs meet machine learning and all their friends</h4>
+				<p align="left"><i>tutorial @<a target="_blank"href="https://k-cap2017.org/workshops-and-tutorials/">K-CAP 2017</a></i></p>
+              	<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 04/12/2017</small></p>
+            </div>
+            <div class="timeline-body">              
+			  <p align="justify">This half-day tutorial covers the foundations and modern practical applications of knowledge-based and statistical methods, techniques and models and their combination for exploiting large document corpora. It is focused on the foundations of many of the techniques that can be used for this purpose, including knowledge graphs, word embeddings, neural network methods, probabilistic topic models, and describes how a combination of these techniques is being used in practical applications and commercial projects where the instructors are currently involved.</p>
+              <hr>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-download"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+				  <li><a target="_blank" href="http://expertsystemlab.com/kcap2017/">Overview</a></li>
+                  <li><a target="_blank" href="https://www.slideshare.net/CarlosBadenes/probabilistic-topic-models-84159722">Slides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-send"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Noticias Abiertas</h4>
+			  <p align="left"><i>prototype @<a target="_blank" href="http://datos.gob.es/es/noticia/todo-un-desafio-aporta2017">Desafio Aporta 2017</a></i></p>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 04/12/2017</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>Incorporation of natural language processing techniques to the indexing process of open data sets to increase their characterization and allow their linking with news published in digital media. Given the text of a news item, the system suggests to its author data sets published in datos.gob.es based on three aspects:
+- space-time proximity: datasets whose content covers the location and / or time where the news is framed.
+- similarity: data sets that deal with issues similar to those discussed in the news.
+- reference: datasets that contain people, places or organizations mentioned in the news. The latter case will also incorporate new metadata to the existing data set based on the entities (people, places, organizations) extracted from its content.
+Ideally, the importance of each line of recommendation will depend on the content of the news.</p>
+              <hr>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-download"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+				  <li><a href="http://datos.gob.es/es/noticia/desafio-aporta-pasa-la-2a-fase-tras-seleccionar-las-10-mejores-ideas-de-las-45-presentadas-0">Article</a></li>	
+                  <li><a target="_blank" href="https://youtu.be/i-Cke_uaEkc">Video</a></li>
+                  <li><a target="_blank" href="https://www.slideshare.net/CarlosBadenes/noticias-abiertas">Slides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+		  <div class="timeline-badge"><i class="glyphicon glyphicon-blackboard"></i></div>          
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Polypharmacy in HIV-infected Patients Receiving Antiretroviral Therapy in the Region of Madrid</h4>
+			  <p align="left"><i>poster @<a target="_blank" href="http://www.eacs-conference2017.com">EACS 2017</a></i></p>
+			  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 17/10/2017</small></p>
+            </div>
+            <div class="timeline-body">
+              <p align="justify">This was a cross-sectional population-based study carried out from January 1 to June 30, 2016 in the region of Madrid. Hospital pharmacies dispense antiretrovirals (ARVs), and Co-meds are dispensed mainly by community pharmacies. Refills of medications are done monthly. The following parameters were evaluated: age, sex, and prescription drugs (ARVs and Co-meds). Patients were classified as pediatric patients (< 18 years) and adults (≥18 years). ARVs were categorized according to class: nRTIs, nnRTIs, PIs, INSTI, CCR5 inhibitors and fusion inhibitors. Co-meds were classified according to the Anatomical Therapeutic Chemical (ATC) classification system. Polypharmacy was considered as the intake of ≥5 Co-meds.</p>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-download"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+				  <li><a target="_blank" href="#">Slides</a></li>	
+                  <li><a target="_blank" href="http://resourcelibrary.eacs.cyim.com/mediatheque/media.aspx?mediaId=32793&channel=28172">Video</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+			<div class="timeline-badge warning"><i class="glyphicon glyphicon-list-alt"></i></div>          
+          	<div class="timeline-panel">
+            	<div class="timeline-heading">
+              	  <h4 class="timeline-title">An initial Analysis of Topic-based Similarity among Scientific Documents based on their Rhetorical Discourse Parts</h4>
+				  <p align="left"><i>paper @<a target="_blank" href="https://semsci.github.io/semSci2017/">ISWC SemSci Workshop</a></i></p>
+				  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 01/10/2017</small></p>
+            	</div>
+            	<div class="timeline-body">
+              <p>Summaries and abstracts of research papers have been traditionally used for many purposes by scientists, research practitioners, editors, programme committee members or reviewers (e.g. to identify relevant papers to read or publish, cite them, explore new fields and disciplines). As a result, many paper repositories only store or expose abstracts, what may limit the capacity of finding the right paper for a specific research purpose. Given the size limitations and the concise nature of abstracts, they usually omit explicit references to some contributions and impacts of the paper. Therefore for certain information retrieval tasks they cannot be considered as the most appropriate excerpt of the paper to base these operations on. In this paper we have studied other kinds of summaries, built upon textual fragments falling under certain categories of the scientific discourse, such as <i>outcome</i>,<i>background</i>, <i>approach</i>, etc, in order to decide which one is more appropriate in order to substitute the original text. In particular, two novel measures are proposed: (1) <i>internal-representativeness</i>, which evaluates how well a summary describes what the full-text is about and (2) <i>external-representativeness</i>, which evaluates the potential of a summary to discover related texts. Results suggest that summaries explaining the method of a scientific article express a more accurate description of the full-content than others. In addition, more relevant related articles are also discovered from summaries describing the method, together with those containing the background knowledge or the outcomes of the research paper.</p>
+              <hr>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a target="_blank" href="papers/initial-analysis-topic.pdf">Paper</a></li>
+				  <li><a target="_blank"  href="https://www.slideshare.net/ocorcho/an-initial-analysis-of-topicbased-similarity-among-scientific-documents-based-on-their-rhetorical-discourse-parts">Slides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>        
+        <li class="timeline-inverted">
+			<div class="timeline-badge warning"><i class="glyphicon glyphicon-list-alt"></i></div>          
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Distributing Text Mining tasks with <i>librAIry</i></h4>
+			  <p align="left"><i>paper @<a target="_blank" href="https://doceng.org/doceng2017/">DocEng</a></i></p>
+			  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 04/09/2017</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>We present <i>librAIry</i>, a novel architecture to store, process and analyze large collections of textual resources, integrating existing algorithms and tools into a common, distributed, high-performance workflow. Available text mining techniques can be incorporated as independent plug&play modules working in a collaborative manner into the framework. In the absence of a pre-defined flow, <i>librAIry</i> leverages on the aggregation of operations executed by different components in response to an emergent chain of events. Extensive use of Linked Data (LD) and Representational State Transfer (REST) principles are made to provide individually addressable resources from textual documents. We have described the architecture design and its implementation and tested its effectiveness in real-world scenarios such as collections of research papers,  patents or ICT aids,  with the objective of providing solutions for decision makers and experts in those domains. Major advantages of the framework and lessons-learned from these experiments are reported.</p>
+              <hr>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a target="_blank" href="papers/distributing-text-mining-with-librairy.pdf">Paper</a></li>
+				  <li><a target="_blank" href="https://www.slideshare.net/CarlosBadenes/distributing-text-mining-tasks-with-librairy">Slides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+			<div class="timeline-badge warning"><i class="glyphicon glyphicon-list-alt"></i></div>          
+          	<div class="timeline-panel">
+            	<div class="timeline-heading">
+              	  <h4 class="timeline-title">Semantic Saturation in Retrospective Text Document Collections</h4>
+				  <p align="left"><i>paper @<a target="_blank" href="http://icteri.org/icteri-2017/">ICTERI</a></i></p>
+				  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 14/05/2017</small></p>
+            	</div>
+            	<div class="timeline-body">
+              <p>This paper presents the motivation for, planning of, and very first results of the PhD project by the first author. The objective of the project is to experimentally assess the representativeness (completeness), for knowledge extraction, of a retrospective textual document collection. The collection is chosen to describe a single well circumscribed subject domain. The approach to assess completeness is based on measuring the saturation of the semantic (terminological) footprint of the collection. The goal of this experimental study is to check if the saturation-based approach is valid. The project is performed at the Dept. of Computer Science of Zaporizhzhya National University in cooperation with BWT Group, Universidad Politecnica de Madrid, and Springer-Verlag GmbH.</p>
+              <hr>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a target="_blank" href="http://ceur-ws.org/Vol-1851/paper-1.pdf">Paper</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
 </body>
-
 </html>
+
