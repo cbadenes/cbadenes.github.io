@@ -198,11 +198,11 @@
         window.alert = function(){};
         var defaultCSS = document.getElementById('bootstrap-css');
         function changeCSS(css){
-            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
-            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />');
+            else $('head > link').filter(':first').replaceWith(defaultCSS);
         }
         $( document ).ready(function() {
-          var iframe_height = parseInt($('html').height());           
+          var iframe_height = parseInt($('html').height());
         });
     </script>-->
 </head>
@@ -220,6 +220,35 @@
         </p>
     </div>
     <ul class="timeline">
+        <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-cog"></i></div>
+          <div class="timeline-panel">
+              <div class="timeline-heading">
+                  <h4 class="timeline-title">Corpus Viewer 2.0</h4>
+                  <p align="left"><i>system @<a target="_blank"
+                                                   href="http://www.mineco.gob.es/portal/site/mineco/menuitem.19368ee62a6eae4c2adf03a0026041a0/?vgnextoid=fe03a570b4ee3610VgnVCM1000001d04140aRCRD&lang_choosen=en">SEAD</a></i></p>
+                  <p>
+                      <small class="text-muted"><i class="glyphicon glyphicon-time"></i>17/12/2018</small>
+                  </p>
+              </div>
+              <div class="timeline-body">
+                  <p>The Corpus Viewer platform relies on natural language processing (NLP), machine learning (ML), and machine translation (MT) techniques to analyze structured metadata and unstructured textual data in large corpus of textual documents. The platform allows decision-makers and policy implementers the ability to analyze the R+D+i information space (mainly patents, scientific publications and public grants) for the implementation of evidence- and knowledge-based policies. It is based, among other techniques, on the modeling of topics and the analysis of graphs. Added integration with the NLP (English and Spanish) and Topic Models modules from <a target="_blank"
+                                                   href="http://librairy.linkeddata.es">librAIry</a>.</p>
+                  <hr>
+                  <div class="btn-group" role="group">
+                      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                          <i class="glyphicon glyphicon-download"></i> <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a target="_blank" href="https://github.com/cbadenes/corpus-viewer-addons">code</a></li>
+                        <li><a target="_blank" href="https://www.plantl.gob.es/tecnologias-lenguaje/actividades/plataformas/Paginas/corpus-viewer.aspx">article</a></li>
+                      </ul>
+                  </div>
+                  <hr>
+              </div>
+          </div>
+        </li>
         <li>
             <div class="timeline-badge"><i class="glyphicon glyphicon-blackboard"></i></div>
             <div class="timeline-panel">
@@ -872,4 +901,3 @@
 </div>
 </body>
 </html>
-
